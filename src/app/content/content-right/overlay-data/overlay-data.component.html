@@ -1,0 +1,389 @@
+<div class="overlay-title">
+  <div class="overlay-title_icon">
+     <mat-icon class="storage-icon">layers</mat-icon><!--stop_circle -->
+  </div>
+  <div class="overlay-title_text">Overlay Data <span class="overlay-title_text_sub">(<strong>14</strong> datasets)</span></div>
+</div>
+
+<div class="data-card-container">
+  <ul class="data-card-container_inner">
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="green-area" [checked]="default" (change)="onAddOverlay($event)">
+                Green area
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="green-area" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Green area data provided by Eindhoven Open Data (2019).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="parks-playgrounds" [checked]="default" (change)="onAddOverlay($event)" >
+                Parks and playgrounds
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="parks-playgrounds" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Parks and playgrounds extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="bennekel" [checked]="default" (change)="onAddOverlay($event)" >
+                Local project (Bennekel)
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="bennekel" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            This data shows the survey results of vitality related questions among citizens in the neighborhood of Bennekel.
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="traffic" [checked]="default" (change)="onAddOverlay($event)">
+                Traffic
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="traffic" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Traffic (with speed limit) extracted from the point of interest data by OpenStreetMap (2020). Darker color indicates higher speed limit.
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="running-routes" [checked]="default" (change)="onAddOverlay($event)">
+                Running routes
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="running-routes" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Anonymized running routes data extracted from Hardlopen met Evy app (N=500). Darker color indicates the higher duplications of running routes.
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="bike-routes" [checked]="default" (change)="onAddOverlay($event)">
+                Bike paths
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="bike-routes" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Bike paths data provided by Eindhoven Open Data (2019).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="sports-facilities" [checked]="default" (change)="onAddOverlay($event)">
+                Sports facilities
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="sports-facilities" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Sports facilities (sports center, swimming pool and pitch) extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="medical-facilities" [checked]="default" (change)="onAddOverlay($event)">
+                Medical facilities
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="medical-facilities" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Medical facilities (doctors) extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="community-centers" [checked]="default" (change)="onAddOverlay($event)">
+                Community centers
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="community-centers" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Community centers extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="sports-shops" [checked]="default" (change)="onAddOverlay($event)">
+                Sports shops
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="sports-shops" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Sports shops (e.g. bicycle, outdoor shops) extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="grocery-stores" [checked]="default" (change)="onAddOverlay($event)">
+                Grocery stores
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="grocery-stores" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Grocery stores (supermarkets and butchers) extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="fast-foods" [checked]="default" (change)="onAddOverlay($event)">
+                Fast foods
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="fast-foods" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Fast foods extracted from the point of interest data by OpenStreetMap (2020).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="public-concerns" [checked]="default" (change)="onAddOverlay($event)">
+                Public concerns
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="public-concerns" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            <span class="desc-content_text">
+              Public concerns data obtained through BuitenBeter app, which is available in Eindhoven Open Data.
+              This data shows the public concerns reported during the period from July 1, 2021 to August 31, 2020 about following topics:
+            </span>
+            <ul class="desc-content_legend">
+              <li class="desc-content_legend_each">
+                <span class="desc-content_legend_each_circle noise_problem"></span>
+                <span class="desc-content_legend_each_label">Noise problem</span>
+              </li>
+              <li class="desc-content_legend_each">
+                <span class="desc-content_legend_each_circle dirty_pavement"></span>
+                <span class="desc-content_legend_each_label">Dirty pavement</span>
+              </li>
+              <li class="desc-content_legend_each">
+                <span class="desc-content_legend_each_circle sports_accomodation"></span>
+                <span class="desc-content_legend_each_label">Sports accormodation</span>
+              </li>
+              <li class="desc-content_legend_each">
+                <span class="desc-content_legend_each_circle playground_equipment"></span>
+                <span class="desc-content_legend_each_label">Playground equipment</span>
+              </li>
+              <li class="desc-content_legend_each">
+                <span class="desc-content_legend_each_circle unsafe_traffic"></span>
+                <span class="desc-content_legend_each_label">Unsafe traffic</span>
+              </li>
+              <li class="desc-content_legend_each">
+                <span class="desc-content_legend_each_circle bad_odor"></span>
+                <span class="desc-content_legend_each_label">Bad odor</span>
+              </li>
+            </ul>
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+    <li class="data-card" aria-selected="false">
+      <div class="data-card_title">
+        <div class="title-wrapper">
+          <h2 class="title-txt">
+              <mat-checkbox class="data-checkbox" value="air-quality" [checked]="default" (change)="onAddOverlay($event)">
+                Air quality
+              </mat-checkbox>
+          </h2>
+          <span class="title-end"></span>
+        </div>
+      </div>
+      <mat-accordion class="data-card_description">
+        <mat-expansion-panel [expanded]="false">
+          <mat-expansion-panel-header value="air-quality" class="overlay-description">
+            <mat-panel-title>
+              <div class="desc-title">Description</div>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <div class="desc-content">
+            Air quality data contains PM1, PM2.5 and PM10 provided by Eindhoven Open Data. This data was captured on May 26, 2021 at 8:30am from each airbox station in the city. Colors show the intensity of PM2.5 based on the average in Eindhoven at that moment (light gray:low, medium gray: average, and dark gray: high *0 to 20µg/m3 is considered as good to moderate).
+          </div>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </li>
+
+
+

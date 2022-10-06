@@ -1,0 +1,91 @@
+<div id="map-container">
+  <!-- loader -->
+  <div id="loader-bg" aria-hidden="false">
+    <div id="loader-inner"></div>
+    <div id="loader"></div>
+  </div>
+  <!-- tooltip -->
+  <div id="basemap-tooltip" class="data-tooltip" aria-hidden="true">
+    <span id="basemap-tooltip-place"></span>
+    <span id="basemap-tooltip-value"></span>
+    <span id="basemap-tooltip-moreData" aria-hidden="true">Click to see more data<br>about this neighborhood</span>
+  </div>
+  <div id="overlay-tooltip" class="data-tooltip" aria-hidden="true">
+    <span class="data-tooltip_type">Type</span>
+    <span id="overlay-tooltip-type"></span>
+    <span class="data-tooltip_name">Name</span>
+    <span id="overlay-tooltip-name"></span>
+  </div>
+  <div id="airquality-tooltip" class="data-tooltip" aria-hidden="true">
+    <span class="data-tooltip_pm1">PM1</span>
+    <span id="airquality-tooltip-pm1" class="airquality-tooltip">Something</span>
+    <span class="data-tooltip_pm25" >PM2.5</span>
+    <span id="airquality-tooltip-pm25" class="airquality-tooltip">Something</span>
+    <span class="data-tooltip_pm10">PM10</span>
+    <span id="airquality-tooltip-pm10" class="airquality-tooltip">Something</span>
+  </div>
+  <div id="traffic-tooltip" class="data-tooltip" aria-hidden="true">
+    <span class="data-tooltip_topic">Speed Limit</span>
+    <span id="overlay-tooltip-speedlimit"></span>
+  </div>
+  <div id="publicconcerns-tooltip" class="data-tooltip" aria-hidden="true">
+    <span class="data-tooltip_topic">Topic</span>
+    <span id="overlay-tooltip-topic"></span>
+    <span class="data-tooltip_time">Date and time</span>
+    <span id="overlay-tooltip-time"></span>
+  </div>
+
+  <div id="bennekel-tooltip" class="data-tooltip" aria-hidden="true">
+    <span id="bennekel-tooltip-content">Click to show data</span>
+  </div>
+
+  <div id="Bennekel-modal" aria-hidden="true">
+    <div id="Bennekel-modal_inner">
+      <h2 class="title">Barriers for sports and exercises in Bennekel</h2>
+      <p class="description">
+      This chart shows the reasons why residents in this particular neighborhood do not participate in sports or exercises.
+      Large numbers indicate the high responses as reasons from the questionnaire participants. <br>(This is a part of data reported from this local project.)
+     </p>
+      <span class="close" id="Bennekel-modal-close">
+        <i class="fas fa-times"></i>
+      </span>
+    </div>
+  </div>
+
+  <!-- map legend -->
+  <div class="map-legend">
+    <span class="map-legend_title" id="legendTitle"></span>
+    <span class="map-legend_supply">(Percentage of people<br>indicating)</span>
+    <ul class="map-legend_container">
+      <li id="legend4" class="map-legend_container_legend">
+        <span id="legend4-box" class="map-legend_container_legend_box"></span>
+        <span id="legend4a-txt"></span><span class="map-legend_container_legend_measure">&nbsp;%</span>
+        <span class="map-legend_container_legend_sep">&nbsp;and over</span>
+      </li>
+      <li id="legend3" class="map-legend_container_legend">
+        <span id="legend3-box" class="map-legend_container_legend_box"></span>
+        <span id="legend3a-txt"></span>
+        <span class="map-legend_container_legend_sep">&nbsp;-&nbsp;</span>
+        <span id="legend3b-txt"></span><span class="map-legend_container_legend_measure">&nbsp;%</span>
+      </li>
+      <li id="legend2" class="map-legend_container_legend">
+        <span id="legend2-box" class="map-legend_container_legend_box"></span>
+        <span id="legend2a-txt"></span>
+        <span class="map-legend_container_legend_sep">&nbsp;-&nbsp;</span>
+        <span id="legend2b-txt"></span><span class="map-legend_container_legend_measure">&nbsp;%</span>
+      </li>
+      <li id="legend1" class="map-legend_container_legend">
+        <span id="legend1-box" class="map-legend_container_legend_box"></span>
+        <span id="legend1a-txt"></span>
+        <span class="map-legend_container_legend_sep">&nbsp;-&nbsp;</span>
+        <span id="legend1b-txt"></span><span class="map-legend_container_legend_measure">&nbsp;%</span>
+      </li>
+      <li id="legend0" class="map-legend_container_legend">
+        <span id="legend0-box" class="map-legend_container_legend_box"></span>
+        <span id="legend1a-txt">No Data</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
